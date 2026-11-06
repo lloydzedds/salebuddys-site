@@ -42,7 +42,7 @@
   <main>
     <p><a href="index.html">Back to Sale Buddy</a></p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: October 31, 2026</p>
+    <p class="meta">Last updated: November 4, 2026</p>
 
     <h2>Overview</h2>
     <p>
@@ -86,6 +86,59 @@
       cloud backup features that you choose to use. Sale Buddy uses Google Drive
       app data access to save, restore, download, and delete the app's own
       backup file.
+    </p>
+
+    <h2>Shop And Staff (Optional)</h2>
+    <p>
+      Shop and Staff lets a shop owner share products, customers, bills and
+      stock with their cashiers' phones. It is used only if you sign in to it. You sign in with
+      Google or with an email address and password. Your account is kept by
+      Google Firebase Authentication, which stores your email address, your
+      name, and, for an email account, your password in a protected form that
+      Sale Buddy never sees.
+    </p>
+    <p>
+      When you create or join a shop, Sale Buddy stores the following in Google
+      Cloud Firestore, a database that Google runs for Sale Buddy:
+    </p>
+    <ul>
+      <li>The shop's name, who owns it, and until when its Shop and Sync plan
+        counts as paid.</li>
+      <li>For each person in the shop: their name, email address, role (owner
+        or cashier), and when they joined.</li>
+      <li>Invite codes the owner makes, which stop working after 24 hours.</li>
+      <li>Product details: name, selling, wholesale and MRP prices, barcode,
+        category, unit, GST rate, HSN code, low-stock level, expiry date, and
+        storage location. Cost prices are stored too, and only the owner can
+        read them.</li>
+      <li>Customers: name, phone number, price type, credit limit, GSTIN, and
+        follow-up date.</li>
+      <li>Bills: bill number, date, items, quantities, prices, discounts, GST,
+        the customer's name and phone number, how and when it was paid, any
+        amount still owed, returns, payments collected later, and the name of
+        the person who sold. Cost prices and profit are not stored with bills.</li>
+      <li>Stock changes: for each product, how many were sold, bought or
+        adjusted, so every phone can work out the stock.</li>
+      <li>Quotations: the customer's name and phone number, the items, and the
+        notes written on them.</li>
+      <li>Activity log: a short note of what was done on each phone, such as
+        &ldquo;Sale made&rdquo;, with the staff name.</li>
+      <li>For the owner's phones only: suppliers (name, phone number, note),
+        purchases with their items, prices and payments, expenses, and the
+        daily cash counts. Cashiers cannot read these.</li>
+    </ul>
+    <p>
+      Only the people in a shop can read its data, and cashiers cannot read
+      cost prices, purchases, expenses, or cash counts. Product photos and
+      loyalty points stay on each phone and are not stored in the cloud. The
+      data is sent encrypted. The developer can reach this database only to keep the
+      service working, to fix problems, or when the law requires it, and never
+      sells it or uses it for advertising.
+    </p>
+    <p>
+      The Shop and Sync plan is a Google Play subscription. Google Play handles
+      the payment; Sale Buddy asks Google Play whether the plan is active and
+      stores only until when the shop counts as paid.
     </p>
 
     <h2>Camera And Photos</h2>
@@ -166,19 +219,21 @@
 
     <h2>What We Do Not Collect</h2>
     <p>
-      Sale Buddy has no servers of its own. The developer does not receive,
-      store, or have access to your products, sales, customers, or backups. The
-      only third-party data collection is the advertising and crash reports
-      described above. This version of the app has no analytics. If that
-      changes, this policy will be updated first.
+      Apart from the Shop and Staff data described above, which is stored only
+      if you use that feature, the developer does not receive, store, or have
+      access to your products, sales, customers, or backups. The only other
+      data collection is the advertising and crash reports described above.
+      This version of the app has no analytics. If that changes, this policy
+      will be updated first.
     </p>
 
     <h2>Sharing</h2>
     <p>
       Sale Buddy does not sell your app data. Data is shared only when you
       choose actions such as sharing a bill, exporting a report, sharing a
-      backup, saving a file to device storage, or using Google Drive app data
-      backup.
+      backup, saving a file to device storage, using Google Drive app data
+      backup, or sharing products, customers, bills and stock with the people in
+      your shop through Shop and Staff.
     </p>
 
     <h2>Data Deletion</h2>
@@ -189,6 +244,14 @@
       You can also manage connected app access from your Google Account.
     </p>
     <p>
+      To delete your Shop and Staff account, open Settings, then Shop and
+      Staff, and tap Delete Account. This deletes your account, every shop you
+      own with its products, cost prices, customers, bills, stock changes,
+      quotations, purchases, suppliers, expenses, cash counts, activity log,
+      invite codes and staff list, and takes you out of shops you joined. You can also ask for this by
+      email at the address below; it is done within 30 days.
+    </p>
+    <p>
       Your data stays until you delete it. A Google Drive backup stays in your
       Drive until you delete it. For step-by-step instructions, see
       <a href="delete-account.html">How to delete your data</a>.
@@ -196,8 +259,9 @@
 
     <h2>Security</h2>
     <p>
-      Sale Buddy uses Google Sign-In and Google APIs for Google account and
-      backup features. You are responsible for keeping your device and Google
+      Sale Buddy uses Google Sign-In, Google APIs, and Google Firebase for
+      account, backup, and Shop and Staff features, and data sent to them is
+      encrypted in transit. You are responsible for keeping your device and Google
       account secure.
     </p>
 
