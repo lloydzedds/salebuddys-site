@@ -42,7 +42,7 @@
   <main>
     <p><a href="index.html">Back to Sale Buddy</a></p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: November 14, 2026</p>
+    <p class="meta">Last updated: November 18, 2026</p>
 
     <h2>Overview</h2>
     <p>
@@ -92,8 +92,9 @@
 
     <h2>Shop And Staff (Optional)</h2>
     <p>
-      Shop and Staff lets a shop owner share products, customers, bills and
-      stock with their cashiers' phones. It is used only if you sign in to it. You sign in with
+      Shop and Staff lets a shop owner share products, customers, bills,
+      stock and other shop records with the phones of the people who work in
+      the shop. It is used only if you sign in to it. You sign in with
       Google or with an email address and password. Your account is kept by
       Google Firebase Authentication, which stores your email address, your
       name, and, for an email account, your password in a protected form that
@@ -106,13 +107,19 @@
     <ul>
       <li>The shop's name, who owns it, and until when its Shop and Sync plan
         counts as paid.</li>
-      <li>For each person in the shop: their name, email address, role (owner
-        or cashier), and when they joined.</li>
-      <li>Invite codes the owner makes, which stop working after 24 hours.</li>
+      <li>For each person in the shop: their name, email address, role (such
+        as owner, Cashier or Manager), what that role allows them to do, and
+        when they joined. The roles the owner makes, with their permissions,
+        are stored too.</li>
+      <li>Invitations the owner makes: a code that stops working after 24
+        hours, or an invitation to a person's email address, which stores
+        that address and stops working after 7 days.</li>
       <li>Product details: name, selling, wholesale and MRP prices, barcode,
         category, unit, GST rate, HSN code, low-stock level, expiry date, and
-        storage location. Cost prices are stored too, and only the owner can
-        read them.</li>
+        storage location. Cost prices are stored too, and only the owner and
+        staff the owner allows to see them can read them.</li>
+      <li>Product photos: a reduced copy of each product's photo, so every
+        phone in the shop shows it.</li>
       <li>Customers: name, phone number, price type, credit limit, GSTIN, and
         follow-up date.</li>
       <li>Bills: bill number, date, items, quantities, prices, discounts, GST,
@@ -120,7 +127,13 @@
         amount still owed, returns, payments collected later, and the name of
         the person who sold. Cost prices and profit are not stored with bills.</li>
       <li>Stock changes: for each product, how many were sold, bought or
-        adjusted, so every phone can work out the stock.</li>
+        adjusted, so every phone can work out the stock. For the owner and
+        staff the owner allows to adjust stock, stock changed by hand is
+        stored with the reason (such as damaged, expired or found), the
+        quantity and its cost.</li>
+      <li>Table Orders, for shops that use them: the tables, the orders
+        running on them, and the dishes, quantities and prices on each order,
+        so waiters' phones and the counter see the same orders.</li>
       <li>Quotations: the customer's name and phone number, the items, and the
         notes written on them.</li>
       <li>Activity log: a short note of what was done on each phone, such as
@@ -132,10 +145,12 @@
         and the daily cash counts. Other staff cannot read these.</li>
     </ul>
     <p>
-      Only the people in a shop can read its data, and cashiers cannot read
-      cost prices, purchases, expenses, or cash counts. Product photos and
-      loyalty points stay on each phone and are not stored in the cloud. The
-      data is sent encrypted. The developer can reach this database only to keep the
+      Only the people in a shop can read its data, and staff can read cost
+      prices, purchases, expenses and cash counts only if the role the owner
+      gave them allows it. Loyalty points and photos of suppliers' bills stay
+      on each phone and are not stored in the cloud. When a staff member signs
+      out, leaves the shop or is removed, the shop's data is deleted from
+      their phone; the shop keeps it. The data is sent encrypted. The developer can reach this database only to keep the
       service working, to fix problems, or when the law requires it, and never
       sells it or uses it for advertising.
     </p>
@@ -147,9 +162,12 @@
 
     <h2>Camera And Photos</h2>
     <p>
-      Sale Buddy asks for camera permission only when you scan a barcode. Product
-      photos you choose or take stay on your device and are included only in the
-      backups you create.
+      Sale Buddy asks for camera permission only when you scan a barcode.
+      Product photos and photos of suppliers' bills that you choose or take
+      are kept on your device and are included in the backups you create. In
+      a shop that uses Shop and Staff, product photos are also shared with the
+      shop's other phones, as described above. Photos of suppliers' bills are
+      never sent to the cloud by Sale Buddy.
     </p>
 
     <h2>App Lock, Notifications, Printing And Sharing</h2>
@@ -236,8 +254,8 @@
       Sale Buddy does not sell your app data. Data is shared only when you
       choose actions such as sharing a bill, exporting a report, sharing a
       backup, saving a file to device storage, using Google Drive app data
-      backup, or sharing products, customers, bills and stock with the people in
-      your shop through Shop and Staff.
+      backup, or sharing your shop's data with the people in your shop
+      through Shop and Staff.
     </p>
 
     <h2>Data Deletion</h2>
@@ -250,9 +268,10 @@
     <p>
       To delete your Shop and Staff account, open Settings, then Shop and
       Staff, and tap Delete Account. This deletes your account, every shop you
-      own with its products, cost prices, customers, bills, stock changes,
-      quotations, purchases, suppliers, expenses, cash counts, activity log,
-      invite codes and staff list, and takes you out of shops you joined. You can also ask for this by
+      own with its products, product photos, cost prices, customers, bills,
+      stock changes, quotations, purchases, suppliers, expenses, cash counts,
+      table orders, activity log, roles, invitations and staff list, and
+      takes you out of shops you joined. You can also ask for this by
       email at the address below; it is done within 30 days.
     </p>
     <p>
