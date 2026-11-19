@@ -42,7 +42,7 @@
   <main>
     <p><a href="index.html">Back to Sale Buddy</a></p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: November 18, 2026</p>
+    <p class="meta">Last updated: November 19, 2026</p>
 
     <h2>Overview</h2>
     <p>
@@ -227,6 +227,16 @@
       Play, which keeps the record against your Google account so it can be
       restored on a new phone. Sale Buddy does not see your payment details.
     </p>
+    <p>
+      To confirm that a purchase is real, the app sends Google Play's purchase
+      token for it to Sale Buddy's server, which asks Google Play about it.
+      For the Shop and Sync plan, the server keeps a scrambled (hashed) copy
+      of the token, the Shop and Staff account that used it, the plan, until
+      when it is paid, and the shops it pays for, so renewals, cancellations
+      and refunds that Google Play reports can be applied. A new plan
+      purchase carries a scrambled (hashed) form of your Shop and Staff
+      account ID, so the plan can only pay for your own shops.
+    </p>
 
     <h2>Crash Reports</h2>
     <p>
@@ -286,6 +296,15 @@
       account, backup, and Shop and Staff features, and data sent to them is
       encrypted in transit. You are responsible for keeping your device and Google
       account secure.
+    </p>
+    <p>
+      To keep modified copies of the app, emulators and scripts away from shop
+      data and purchases, Sale Buddy uses Firebase App Check with Google Play
+      Integrity. When the app talks to Firebase or Sale Buddy's server, Google
+      checks that it is the real app from Google Play on a genuine Android
+      device and gives it a short-lived token. Google handles these checks
+      under its own privacy policy; Sale Buddy receives only whether the check
+      passed.
     </p>
 
     <h2>Children</h2>
